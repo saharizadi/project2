@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+       body{
+        font-family: "Lora", serif;
+       }
+        li{
+            list-style-type:none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu{
+            position: relative;
+            height: 300px;
+            display: flex;
+            background-image: url(img/base\ cover.jpg);
+            background-size: 100% 100%;
+               &:hover{
+            &::before{ 
+                width: 100%;
+                left: 0;
+            }
+            &::after{
+                width: 100%;
+                left: 0;
+            }
+        }
+            &::before{
+            content:'' ;
+            width: 2px;
+            display: flex;
+            height: 5px;
+            background-color:black;
+            position: absolute;
+            top: 0;left: 50%;
+               transition: 1s;
+             
+        }
+        &::after{
+            content: '';
+            width: 2px;
+            height: 5px;
+            display: flex;
+            position: absolute;
+            ;left: 50%;bottom: 0;
+            background-color:black;
+            transition: 1s;
+        }
+            >figure{width: 20%;
+                display: flex;
+                padding-top: 10px;
+               
+                >img{
+
+                    height: 30%;
+                }
+
+            }
+            >ul{width: 80%;
+                padding-right: 30px;
+                display: flex;
+                justify-content: flex-end;
+                >li{display: flex;
+                    position: relative;
+                    &:hover{
+                       
+                         >ul{
+                                display: block;
+                            }
+                        >a{
+                            color: black;
+                            background-color: rgba(245, 245, 245, 0.849);
+                          
+                            align-items: center;
+                           
+                        }
+                    }
+                    
+                    >a{
+                        
+                        height: 100%;
+                        display: flex;
+                      
+                        padding: 40px 30px;
+                        font-size: 30px;
+                        text-transform: capitalize;
+                        color:black;
+                        
+                    }
+                    
+                  
+                    /* submenu */
+                   >ul{
+                    position: absolute;
+                    top: 300px;left: 0;
+                    width: 100%;
+                     display: none;
+                     >h3{display: flex;
+                        justify-content: center;
+                        background-color: rgb(68, 68, 68);
+                        color: azure;
+                        border-radius: 20px;
+                        &:hover{
+                            background-color: rgb(207, 207, 207);
+                            color: rgb(34, 34, 34);
+                        }
+                     }
+                    >li{
+                        display: flex;
+                      margin-bottom: 10px;
+                        height: 50px;
+                        transition: .4s;
+                              &:hover{ margin-bottom: 50px;
+                              
+                     
+                     a{
+                        background-color:rgb(155, 155, 155);
+                        color: orangered;
+                        justify-content: center;
+                        font-size: 30px;
+                        text-transform:bold uppercase;
+                       border-radius: 50px;
+                       
+
+                    }
+
+                      
+                   }
+                   >a{display: flex;
+                    color: azure;
+                    background-color: rgb(46, 46, 46);
+                    font-size: 20px;
+                    align-items: center;
+                    width: 100%; height: 100%;
+                    border-radius: 10px;
+                    padding-inline: 20px;
+                    transition: .4s;
+                   }
+                        
+                }
+
+            }
+        }
+     }
+       
+  }
+   h1{
+        /* display: flex; */
+           width: 100%;height: 100px;
+       
+     margin: 20px auto;
+       text-align: center;
+       font-size: 60px;
+       text-transform: capitalize;
+      background: linear-gradient(to right ,#e0e0e9,#000000);
+        color:azure;
+      
+     
+       }     
+       .img2{
+       display: flex;
+       gap: 40px;
+       justify-content: center;
+      
+       }  
+       .box{
+        width: 100%;
+        height: 450px;
+        display: flex;
+        background-color: gray;
+        margin-top: 50px;
+       }
+       .pic{
+        width: 400px;
+        height: 400px;
+        background: rgb(168, 168, 168);
+       margin: 30px 70px;
+         position: relative;
+         display: flex;
+         align-items: center;
+         transition: 1s;
+         &:hover{
+            border-radius: 200px 0 200px 0px;
+            background-color: orangered;
+            
+         }
+        
+     
+          >figure{
+             &:hover{
+              
+                >img{
+                    scale: 1.1;
+                }
+            >figcaption{
+                opacity: 1;
+                bottom: -100px;
+                border-radius: 30px;
+
+            }
+         }
+           
+             
+            >img{
+                width: 300px;
+                height: 400px;
+                padding: 20px;
+              justify-content: center;
+              transition: 1s;
+              
+              
+            }
+            >figcaption{
+                text-align: center;
+                font-size: 20px;
+                background-color: rgba(0, 0, 0, 0.637);
+                position: absolute;
+                bottom: 0;left: 0;
+                width: 80%;
+                opacity: 0;
+                transition: 1s;
+                margin-inline: 30px;  
+                color: azure;
+            }
+          }
+        }
+        .box2{
+            width: 100%;
+            height: 350px;
+            background-color: rgba(0, 0, 0, 0.863);
+            display: flex;
+            margin-top: 40px;
+            border: 2px orangered dashed;
+            border-radius: 10px;
+            gap: 70px;
+          marquee{
+            
+            >img{
+                height: 300px;
+                width: 300px;
+                margin-block: 30px;
+                padding-inline: 30PX;
+  
+
+            }
+          }  
+
+        }
+        .main-footer{display: flex;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(190, 189, 189);
+            margin-top: 40px;
+            text-align: center;
+            pad: 25px 10px;
+            position: relative;
+            >p{
+                font-size: 30px;
+                text-transform: capitalize;
+                padding-inline: 80px;
+
+            }
+        }
+        .social-icons{
+            display: flex;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 30px 60px 50px 90px;
+            position: absolute;
+            bottom: 0; right: 100px;
+            &:hover{
+                >img{
+                     scale: 1;
+                    
+                }
+                >i{
+                    opacity: 1;
+                    /* margin-top: -25px; */
+                    margin-left: -100px;
+
+                }
+            }
+
+            >img{
+                display: flex;
+                height: 150px;
+               margin-left: -200px;
+               margin-top: 25px;
+               transition: 1s;
+
+
+            }
+            >i{font-size: 30px;
+                color:white;
+                margin-top: 10px;
+                opacity: 0;
+                gap: 15px;
+                transition: 1s;
+               
+            }
+        }
+  
+    </style>
+    <link rel="stylesheet" href="css/fontello.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="menu">
+        <figure>
+            <img src="img/logo3.png" alt=""> 
+        </figure>
+        <ul>
+            <li><a href="">home</a></li>
+            <li ><a href="">product</a>
+            <ul>
+                    
+                        <h3>woman</h3>
+                       
+                            <li><a href="">skirt</a></li>
+                            <li><a href="">dress</a></li>
+                            <li><a href="">shoes</a></li>
+                            <li><a href="">bag</a></li>
+                       
+                    <h3>men</h3>
+                   
+                        <li><a href="">T-Shirt</a></li>
+                        <li><a href="">Hoody</a></li>
+                        <li><a href="">Jeans</a></li>
+                        <li><a href="">shoes</a></li>
+                  
+                    
+                
+                    
+                </ul>
+            </li>
+            <li><a href="">new arrival</a>
+                <ul>
+                    <li><a href="">shoes</a></li>
+                    <li><a href="">bags</a></li>
+                    <li><a href="">jeans</a></li>
+                    <li><a href="">skirt</a></li>
+                    <li><a href="">dress</a></li>
+                </ul>
+            </li>
+            <li><a href="">sale</a></li>
+            <li><a href="">info</a></li>
+        </ul>
+    </nav>
+     <h1>discover the new season collectio</h1>
+    <figure class="img2">
+        <img src="img/zara6.jpg" alt="img">
+        <img src="img/zara10.jpg" alt="">
+    </figure>
+    
+<div class="box">
+<div class="pic">
+    <figure >
+    <img src="img/okok.jpg" alt="">
+    <figcaption>Step into the new season with confidence. Our latest collection blends timeless design with effortless comfort, offering versatile pieces you can wear from morning meetings to evening walks.</figcaption>
+
+   
+</figure>
+</div>
+<div class="pic">
+    <figure >
+    <img src="img/zaratop.jpg" alt="">
+    <figcaption>Step into the new season with confidence. Our latest collection blends timeless design with effortless comfort, offering versatile pieces you can wear from morning meetings to evening walks.</figcaption>
+
+   
+</figure>
+</div>
+
+<div class="pic">
+    <figure >
+    <img src="img/okok2.jpg" alt="">
+    <figcaption>Step into the new season with confidence. Our latest collection blends timeless design with effortless comfort, offering versatile pieces you can wear from morning meetings to evening walks.</figcaption>
+
+   
+</figure>
+</div>
+
+</div>
+<div class="box2">
+<marquee behavior="scrool" scroolamunt="50" direction="right">
+    <img src="img/summer1.jpg" alt="">
+<img src="img/summer10.jpg" alt="">
+<img src="img/summer11.jpg" alt="">
+<img src="img/summer2.jpg" alt="">
+<img src="img/T0399212300-a1.jpg" alt="">
+<img src="img/summer3.jpg" alt="">
+<img src="img/summer4.jpg" alt="">
+<img src="img/summer5.jpg" alt="">
+<img src="img/summer8.jpg" alt="">
+<img src="img/summer9.jpg" alt="">
+
+</marquee>
+</div>
+<footer class="main-footer">
+    <p> 2025 MyWebsite. All rights reserved.Hi, I'm a passionate front-end developer with a growing love for clean code, user-friendly interfaces, and modern web design. This website is part of my learning journey, where I experiment with HTML, CSS, and new ideas every day. I believe that great design starts with simplicity and a clear purpose. Thank you for visiting! SAHAR IZADI</p>
+    
+    <div class="social-icons">
+     <i class="icon-facebook-rect"></i>
+     <i class="icon-instagram"></i>
+     <i class=" icon-linkedin-rect"></i>
+     <i class=" icon-mail"></i>
+     <i class=" icon-github-circled-alt2"></i>
+     <i class=" icon-phone"></i>
+     <img src="img/sahar.jpg" alt="">
+
+    </div>
+</footer>
+   
+</body>
+</html>
